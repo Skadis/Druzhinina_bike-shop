@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html {
   box-sizing: border-box;
 }
@@ -10,6 +11,20 @@ html {
 
 body {
   margin: 0;
+=======
+html { 
+  box-sizing: border-box; 
+}
+
+*, 
+*::before, 
+*::after { 
+  box-sizing: inherit; 
+}
+
+body { 
+  margin: 0 
+>>>>>>> 391d10f1f6efd005da4cb666fd7545faf40e126b
 }
 
 a {
