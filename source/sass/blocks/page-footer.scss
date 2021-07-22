@@ -1,0 +1,127 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 95px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-bottom: 55px;
+  }
+}
+
+.page-footer__text-block {
+  font-family: $font;
+  text-align: center;
+  margin-bottom: 42px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 17px;
+  }
+}
+
+.page-footer__title {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.005em;
+  color: $title-black;
+  margin-bottom: 28px;
+
+  @media (max-width: $tablet-max-width) {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.page-footer__text {
+  font-size: 17px;
+  line-height: 31px;
+  text-align: center;
+  color: $black-70;
+  width: 90%;
+  margin: auto;
+
+  @media (max-width: $tablet-max-width) {
+    width: 100%;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    font-size: 17px;
+    line-height: 31px;
+    width: 80%;
+  }
+}
+
+.page-footer__map {
+  width: 957px;
+  height: 530px;
+  border: none;
+  margin-bottom: 37px;
+
+  @media (max-width: $tablet-max-width) {
+    width: 100%;
+    height: 545px;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 100%;
+    height: 250px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 33px;
+  }
+}
+
+.page-footer__contacts {
+  @include clear-list;
+  display: flex;
+  margin-right: 17px;
+
+  @media (max-width: $tablet-max-width) {
+    margin-right: 10px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+  }
+}
+
+.page-footer__contacts-item {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-of-type) {
+    margin-right: 90px;
+
+    @media (max-width: $mobile-max-width) {
+      margin-right: 0;
+      margin-bottom: 21px;
+    }
+  }
+}
+
+.page-footer__icon {
+  margin-right: 15px;
+}
+
+.page-footer__link {
+  font-family: $font;
+  font-size: 16px;
+  line-height: 22px;
+  color: $black-50;
+}
+
