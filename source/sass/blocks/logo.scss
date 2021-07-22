@@ -1,0 +1,12 @@
+.logo {
+
+  @media (max-width: $tablet-max-width) {
+    position: absolute;
+    top: 25px;
+    left: 22px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    left: 17px;
+  }
+}

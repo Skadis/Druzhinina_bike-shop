@@ -1,0 +1,15 @@
+.container {
+  max-width: 1170px;
+  margin: auto;
+
+  @media (max-width: $tablet-max-width) {
+    width: auto;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
