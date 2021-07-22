@@ -1,5 +1,4 @@
 'use strict';
-<<<<<<< HEAD
 
 const menu = document.querySelector('.main-nav');
 const menuButton = menu.querySelector('.main-nav__toggle');
@@ -18,5 +17,3 @@ menuButton.addEventListener('click', (event) => {
     focusManager.capture(menu);
   }
 });
-=======
->>>>>>> 391d10f1f6efd005da4cb666fd7545faf40e126b
