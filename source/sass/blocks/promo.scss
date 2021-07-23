@@ -34,7 +34,7 @@
 .promo__wrapper {
   display: flex;
   justify-content: center;
-  padding-bottom: 388px;
+  padding-bottom: 346px;
   padding-top: 255px;
   padding-left: 145px;
 
@@ -43,6 +43,7 @@
     align-items: center;
     padding-top: 110px;
     padding-left: 35px;
+    padding-bottom: 50px;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -69,8 +70,11 @@
   letter-spacing: -0.005em;
   margin-top: 25px;
   margin-bottom: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 208px;
 
-   @media (max-width: $tablet-max-width) {
+  @media (max-width: $tablet-max-width) {
     font-size: 30px;
     line-height: 42px;
     margin-bottom: 20px;
@@ -84,6 +88,9 @@
   opacity: 0.8;
   letter-spacing: -0.005em;
   width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 208px;
 
   @media (max-width: $tablet-max-width) {
     font-size: 18px;
@@ -156,6 +163,7 @@
   padding-left: 27px;
   width: 327px;
   margin-bottom: 20px;
+  -moz-appearance: textfield;
 
   @media (max-width: $tablet-max-width) {
     width: 100%;
@@ -187,10 +195,9 @@
   border-radius: 6px;
   padding-top: 16px;
   padding-bottom: 14px;
-  padding-left: 53px;
-  padding-right: 53px;
+  width: 326px;
 
-   @media (max-width: $tablet-max-width) {
+  @media (max-width: $tablet-max-width) {
     padding-left: 49px;
   }
 
