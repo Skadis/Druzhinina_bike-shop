@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Онлайн магазин, продающий лучшие велосипеды">
+  <title>Moon - продажа велосипедов</title>
+  <link rel="preload" href="fonts/opensans-bold.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/opensans-light.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/opensans-regular.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/opensans-semibold.woff2" as="font" crossorigin="">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
-<body class="page__body">
+<body class="page-body">
 
     <svg style="display: none">
       <symbol viewBox="0 0 68 21" id="logo">
@@ -31,21 +36,22 @@
     <h1 class="visually-hidden">Магазин Moon - продажа велосипедов</h1>
 
     <header class="page-header">
-      <div class="page-header__wrapper container">
-        <nav class="page-header__main-nav main-nav main-nav--open">
+      <div class="page-header__wrapper">
+        <!-- main-nav--open - закрытое меню,  main-nav--close - открытое меню -->
+        <nav class="page-header__main-nav main-nav main-nav--no-js">
           <button class="main-nav__toggle" type="button" aria-label="Открыть и закрыть меню"></button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a class="main-nav__link" href="#">О нас</a>
+              <a class="main-nav__link" href="#about">О нас</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Виды велосипедов</a>
+              <a class="main-nav__link" href="#bike-types">Виды велосипедов</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Видео про велосипеды</a>
+              <a class="main-nav__link" href="#video-about">Видео про велосипеды</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Контакты</a>
+              <a class="main-nav__link" href="#contacts">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -61,8 +67,8 @@
                 <use xlink:href="#logo"></use>
               </svg>
             </a>
-            <h2 class="promo__title">Мы продаем велосипеды</h2>
-            <p class="promo__text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+            <h2>Мы продаем велосипеды</h2>
+            <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
           </div>
           <div class="promo__form">
             <p class="promo__form-title">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
@@ -83,37 +89,39 @@
         </div>
       </section>
 
-      <section class="facts">
+      <section class="facts" id="about">
         <div class="facts__wrapper container">
-          <h2 class="title facts__title">Несколько фактов о нас</h2>
+          <h2 class="title">Несколько фактов о нас</h2>
           <ul class="facts__list">
-            <li class="facts__item">Самый широкий выбор велосипедов!</li>
-            <li class="facts__item">Доставка велосипедов по всей России!</li>
-            <li class="facts__item">Большой выбор крутых аксессуаров!</li>
-            <li class="facts__item">Профессиональные консультации!</li>
+            <li>Самый широкий выбор велосипедов!</li>
+            <li>Доставка велосипедов по всей России!</li>
+            <li>Большой выбор крутых аксессуаров!</li>
+            <li>Профессиональные консультации!</li>
           </ul>
         </div>
       </section>
 
-      <section class="types">
+      <section class="types" id="bike-types">
         <div class="types__wrapper container">
-          <h2 class="title types__title">Виды велосипедов</h2>
+          <h2 class="title">Виды велосипедов</h2>
           <ul class="types__list">
             <li class="types__item types__item--road">
               <a class="types__link" href="#">
                 <picture>
-                  <!--<source type="image/webp" srcset="img/road-bike-tablet.webp 1x, img/road-bike-tablet@2x.webp 2x">-->
+                  <source type="image/webp" srcset="img/road-bike.webp 1x, img/road-bike@2x.webp 2x">
 
+                  <!-- 1х: 342px; 2x: 684px -->
                   <img class="types__img" width="342" height="503" src="img/road-bike.jpg" srcset="img/road-bike@2x.jpg 2x" alt="Изображение дорожного велосипеда">
                 </picture>
                 <h3 class="types__subtitle">Дорожный велосипед</h3>
               </a>
             </li>
-            <li class="types__item types__item--mountain">
+            <li class="types__item types__item--mountain ">
               <a class="types__link" href="#">
                 <picture>
-                  <!--<source type="image/webp" srcset="img/road-bike-tablet.webp 1x, img/road-bike-tablet@2x.webp 2x">-->
+                  <source type="image/webp" srcset="img/mountain-bike.webp 1x, img/mountain-bike@2x.webp 2x">
 
+                  <!-- 1х: 342px; 2x: 684px -->
                   <img class="types__img" width="342" height="566" src="img/mountain-bike.jpg" srcset="img/mountain-bike@2x.jpg 2x" alt="Изображение горного велосипеда">
                 </picture>
                 <h3 class="types__subtitle">Горный велосипед</h3>
@@ -122,8 +130,9 @@
             <li class="types__item types__item--children">
               <a class="types__link" href="#">
                 <picture>
-                  <!--<source type="image/webp" srcset="img/road-bike-tablet.webp 1x, img/road-bike-tablet@2x.webp 2x">-->
+                  <source type="image/webp" srcset="img/children-bicycle.webp 1x, img/children-bicycle@2x.webp 2x">
 
+                  <!-- 1х: 342px; 2x: 684px -->
                   <img class="types__img" width="342" height="513" src="img/children-bicycle.jpg" srcset="img/children-bicycle@2x.jpg 2x" alt="Изображение детского велосипеда">
                 </picture>
                 <h3 class="types__subtitle">Детский велосипед</h3>
@@ -133,25 +142,38 @@
         </div>
       </section>
 
-      <section class="video">
+      <section class="video" id="video-about">
+        <div class="video__wrapper container">
+          <h2 class="title">Видео про велосипеды</h2>
+          <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+          <div class="video__player">
+            <picture>
+              <source type="image/webp" srcset="img/video-preview.webp 1x, img/video-preview@2x.webp 2x">
+
+              <!-- 1х: 929px; 2x: 1858px -->
+              <img class="video__preview" width="929" height="522" src="img/video-preview.jpg" srcset="img/video-preview@2x.jpg 2x" alt="Превью видео">
+            </picture>
+            <button class="video__button" type="button" aria-label="Запустить видео"></button>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer class="page-footer">
       <div class="page-footer__text-block">
-        <h2 class="page-footer__title">Как нас найти?</h2>
-        <p class="page-footer__text">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+        <h2>Как нас найти?</h2>
+        <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
       </div>
       <iframe class="page-footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.59910436516!2d30.32089461636648!3d59.93879418187623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1626981898423!5m2!1sru!2sru" allowfullscreen="" loading="lazy"></iframe>
-      <ul class="page-footer__contacts">
-        <li class="page-footer__contacts-item">
-          <svg class="page-footer__icon page-footer__icon--email" width="26" height="20" aria-label="Адрес электронной почты">
+      <ul class="page-footer__contacts" id="contacts">
+        <li class="page-footer__contacts-item page-footer__contacts-item--email">
+          <svg class="page-footer__icon" width="26" height="20" aria-label="Адрес электронной почты">
             <use xlink:href="#email-icon"></use>
           </svg>
           <a class="page-footer__link" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
         </li>
-        <li class="page-footer__contacts-item">
-          <svg class="page-footer__icon page-footer__icon--phone" width="22" height="24" aria-label="Номер телефона">
+        <li class="page-footer__contacts-item page-footer__contacts-item--phone">
+          <svg class="page-footer__icon" width="22" height="24" aria-label="Номер телефона">
             <use xlink:href="#phone-icon"></use>
           </svg>
           <a class="page-footer__link" href="tel:+749978468446">+7 (499) -784-684-46</a>
@@ -162,4 +184,4 @@
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
   </body>
-</body></html>
+</html>

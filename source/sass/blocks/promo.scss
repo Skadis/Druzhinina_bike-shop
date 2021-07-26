@@ -2,6 +2,11 @@
   font-family: $font;
   color: $white;
 
+
+  @media (max-width: $tablet-max-width) {
+    position: relative;
+  }
+
   &::after {
     @include pseudo();
     top: 0;
@@ -22,11 +27,19 @@
     @media (max-width: $tablet-max-width) {
       background-image: url("../img/promo-background-tablet.jpg");
       height: 340px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/promo-background-tablet@2x.jpg");
+      }
     }
 
     @media (max-width: $mobile-max-width) {
       background-image: url("../img/promo-background-mobile.jpg");
       height: 390px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/promo-background-mobile@2x.jpg");
+      }
     }
   }
 }
@@ -63,7 +76,7 @@
   }
 }
 
-.promo__title {
+.promo__description h2 {
   font-weight: bold;
   font-size: 46px;
   line-height: 64px;
@@ -81,7 +94,7 @@
   }
 }
 
-.promo__text {
+.promo__description p {
   font-weight: 300;
   font-size: 20px;
   line-height: 32px;
@@ -196,9 +209,14 @@
   padding-top: 16px;
   padding-bottom: 14px;
   width: 326px;
+  cursor: pointer;
 
-  @media (max-width: $tablet-max-width) {
-    padding-left: 49px;
+  &:hover {
+    background-color: $turquoise-dark;
+  }
+
+  &:active, &:focus {
+    background-color: $turquoise-active;
   }
 
   @media (max-width: $mobile-max-width) {

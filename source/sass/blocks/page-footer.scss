@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 95px;
+  flex: 0 0 auto;
 
   @media (max-width: $tablet-max-width) {
     padding-bottom: 55px;
@@ -23,7 +24,7 @@
   }
 }
 
-.page-footer__title {
+.page-footer h2 {
   font-weight: 600;
   font-size: 30px;
   line-height: 30px;
@@ -42,7 +43,7 @@
   }
 }
 
-.page-footer__text {
+.page-footer p {
   font-size: 17px;
   line-height: 31px;
   text-align: center;
@@ -66,6 +67,13 @@
   height: 530px;
   border: none;
   margin-bottom: 37px;
+  background-image: url("../img/map.png");
+  background-repeat: no-repeat;
+  background-size: 957px 530px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map@2x.png");
+  }
 
   @media (max-width: $tablet-max-width) {
     width: 100%;
@@ -73,6 +81,13 @@
     padding-left: 35px;
     padding-right: 35px;
     margin-bottom: 20px;
+    background-image: url("../img/map-tablet.png");
+    background-size: 698px 545px;
+    background-position: center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-tablet@2x.png");
+    }
   }
 
   @media (max-width: $mobile-max-width) {
@@ -81,6 +96,11 @@
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 33px;
+    background-image: url("../img/map-mobile.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-mobile@2x.png");
+    }
   }
 }
 
@@ -109,13 +129,17 @@
 
     @media (max-width: $mobile-max-width) {
       margin-right: 0;
-      margin-bottom: 21px;
+      margin-bottom: 24px;
     }
   }
 }
 
 .page-footer__icon {
   margin-right: 15px;
+
+  @media (max-width: $mobile-max-width) {
+    position: absolute;
+  }
 }
 
 .page-footer__link {
@@ -123,4 +147,40 @@
   font-size: 16px;
   line-height: 22px;
   color: $black-50;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active, &:focus {
+    color: $turquoise;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    position: relative;
+  }
+}
+
+.page-footer__contacts-item--email .page-footer__link {
+  @media (max-width: $mobile-max-width) {
+    padding-left: 47px;
+  }
+}
+
+.page-footer__contacts-item--phone .page-footer__link {
+  @media (max-width: $mobile-max-width) {
+    padding-left: 26px;
+  }
+}
+
+.page-footer__contacts-item--email .page-footer__icon {
+  @media (max-width: $mobile-max-width) {
+    left: 30px;
+  }
+}
+
+.page-footer__contacts-item--phone .page-footer__icon {
+  @media (max-width: $mobile-max-width) {
+    left: 60px;
+  }
 }

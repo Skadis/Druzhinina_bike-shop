@@ -10,7 +10,7 @@
   }
 }
 
-.facts__title {
+.facts h2 {
   margin-bottom: 49px;
 
   @media (max-width: $tablet-max-width) {
@@ -36,7 +36,7 @@
   }
 }
 
-.facts__item {
+.facts li {
   font-size: 22px;
   line-height: 34px;
   text-align: center;

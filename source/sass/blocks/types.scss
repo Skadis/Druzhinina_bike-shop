@@ -6,12 +6,21 @@
   padding-top: 127px;
   padding-bottom: 107px;
 
+  @media (min-width: $desktop-width) and (max-width: $desktop-container-width) {
+    overflow: hidden;
+  }
+
   @media (max-width: $tablet-max-width) {
     padding-top:: 30px;
+    padding-bottom: 20px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-bottom: 12px;
   }
 }
 
-.types__title {
+.types h2 {
   margin-bottom: 50px;
 
   @media (max-width: $tablet-max-width) {
@@ -25,6 +34,11 @@
   justify-content: center;
   column-gap: 50px;
   flex-wrap: wrap;
+
+  @media (min-width: $desktop-width) and (max-width: $desktop-container-width) {
+    flex-wrap: nowrap;
+    column-gap: 0;
+  }
 }
 
 .types__subtitle {
@@ -34,6 +48,14 @@
   text-align: center;
   letter-spacing: -0.5px;
   color: $black;
+
+  &:hover {
+    color: $turquoise;
+  }
+
+  &:active {
+    color: $dark-gray;
+  }
 }
 
 .types__item {
@@ -128,6 +150,10 @@
     border-color: $turquoise;
     border-radius: 50%;
 
+    @media (min-width: $desktop-width) and (max-width: $desktop-container-width) {
+      right: 0;
+    }
+
     @media (max-width: $tablet-max-width) {
       width: 68px;
       height: 68px;
@@ -146,11 +172,23 @@
   margin-top: 15px;
 }
 
-.types__img {
+.types__link img {
+  border-radius: 10px;
+
+  @media (max-width: $desktop-container-width) {
+    width: 85%;
+    height: 85%;
+  }
+
   @media (max-width: $tablet-max-width) {
     width: 270px;
     height: 300px;
     object-fit: cover;
-    border-radius: 10px;
+  }
+}
+
+.types__item--children img {
+  @media (max-width: $tablet-max-width) {
+    object-position: 0 -90px;
   }
 }

@@ -1,4 +1,13 @@
+.page-header__wrapper {
+  overflow: hidden;
+}
+
 .page-header__main-nav {
   margin: auto;
   width: 874px;
+
+  @media (max-width: $tablet-max-width) {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
