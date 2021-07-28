@@ -176,6 +176,11 @@
   width: 327px;
   margin-bottom: 20px;
 
+  &:hover,
+  &:focus {
+    border: 1px solid $turquoise;
+  }
+
   @media (max-width: $tablet-max-width) {
     width: 100%;
     padding-top: 12px;

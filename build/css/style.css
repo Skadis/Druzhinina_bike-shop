@@ -402,6 +402,8 @@ a {
   padding-left: 27px;
   width: 327px;
   margin-bottom: 20px; }
+  .promo__form input:hover, .promo__form input:focus {
+    border: 1px solid #0ad9c6; }
   @media (max-width: 1023px) {
     .promo__form input {
       width: 100%;
