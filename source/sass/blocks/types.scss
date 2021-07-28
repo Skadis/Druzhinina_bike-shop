@@ -11,8 +11,8 @@
   }
 
   @media (max-width: $tablet-max-width) {
-    padding-top:: 30px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 18px;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -24,7 +24,7 @@
   margin-bottom: 50px;
 
   @media (max-width: $tablet-max-width) {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
   }
 }
 
@@ -48,6 +48,7 @@
   text-align: center;
   letter-spacing: -0.5px;
   color: $black;
+  margin-top: 15px;
 
   &:hover {
     color: $turquoise;
@@ -166,10 +167,6 @@
       right: -14px;
     }
   }
-}
-
-.types__subtitle {
-  margin-top: 15px;
 }
 
 .types__link img {

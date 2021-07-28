@@ -2,11 +2,6 @@
   font-family: $font;
   color: $white;
 
-
-  @media (max-width: $tablet-max-width) {
-    position: relative;
-  }
-
   &::after {
     @include pseudo();
     top: 0;
@@ -42,6 +37,10 @@
       }
     }
   }
+
+  @media (max-width: $tablet-max-width) {
+    position: relative;
+  }
 }
 
 .promo__wrapper {
@@ -72,7 +71,7 @@
   }
 
   @media (max-width: $mobile-max-width) {
-    margin-bottom: 47%;
+    margin-bottom: 46.5%;
   }
 }
 
@@ -80,7 +79,7 @@
   font-weight: bold;
   font-size: 46px;
   line-height: 64px;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
   margin-top: 25px;
   margin-bottom: 24px;
   overflow: hidden;
@@ -99,7 +98,7 @@
   font-size: 20px;
   line-height: 32px;
   opacity: 0.8;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
   width: 70%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -133,7 +132,7 @@
   font-size: 17px;
   line-height: 28px;
   text-align: center;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
   width: 80%;
   margin-top: 5px;
   margin-bottom: 19px;
@@ -176,7 +175,6 @@
   padding-left: 27px;
   width: 327px;
   margin-bottom: 20px;
-  -moz-appearance: textfield;
 
   @media (max-width: $tablet-max-width) {
     width: 100%;
@@ -215,7 +213,8 @@
     background-color: $turquoise-dark;
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     background-color: $turquoise-active;
   }
 
