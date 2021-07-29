@@ -13,7 +13,6 @@
   @include clear-list;
   display: flex;
   flex-wrap: wrap;
-  //justify-content: space-between;
   align-items: center;
   max-width: 874px;
   padding-right: 22px;
@@ -35,7 +34,8 @@
     padding-top: 100px;
     padding-left: 0;
     padding-right: 0;
-    z-index: 10;
+    z-index: 1000;
+    overflow-x: scroll;
   }
 }
 
@@ -100,7 +100,7 @@
     width: 50px;
     height: 50px;
     border: none;
-    z-index: 100;
+    z-index: 1001;
   }
 }
 
@@ -133,6 +133,6 @@
 
 .main-nav--close .main-nav__list {
   @media (max-width: $tablet-max-width) {
-    display: flex;
+    display: block;
   }
 }
