@@ -11,8 +11,10 @@
 
 .main-nav__list {
   @include clear-list;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
   flex-wrap: wrap;
+  column-gap: 135px;
   align-items: center;
   max-width: 874px;
   padding-right: 22px;
@@ -22,6 +24,7 @@
   border-bottom: 1px solid $white-70;
 
   @media (max-width: $tablet-max-width) {
+    display: flex;
     flex-direction: column;
     justify-content: start;
     position: absolute;
@@ -36,14 +39,6 @@
     padding-right: 0;
     z-index: 1000;
     overflow-x: scroll;
-  }
-}
-
-.main-nav__item:not(:last-of-type) {
-  margin-right: 135px;
-
-  @media (max-width: $tablet-max-width) {
-    margin-right: 0;
   }
 }
 

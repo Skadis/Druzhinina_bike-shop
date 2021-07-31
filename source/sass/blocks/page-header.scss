@@ -3,7 +3,9 @@
 }
 
 .page-header__main-nav {
-  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 0;
   width: 874px;
 
   @media (max-width: $tablet-max-width) {

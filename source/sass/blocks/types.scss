@@ -30,20 +30,22 @@
 
 .types__list {
   @include clear-list;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
   column-gap: 50px;
-  flex-wrap: wrap;
 
   @media (min-width: $desktop-width) and (max-width: $desktop-container-width) {
     column-gap: 0;
   }
 
   @media (max-width: $tablet-max-width) {
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
     max-width: 900px;
   }
 
   @media (max-width: $mobile-max-width) {
+    grid-template-columns: auto;
     max-width: none;
   }
 }
@@ -90,6 +92,19 @@
 
   @media (max-width: $mobile-max-width) {
     margin-bottom: 20px;
+  }
+}
+
+.types__item:nth-of-type(3n) {
+  @media (max-width: $tablet-max-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-self: center;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    grid-column-start: 1;
+    grid-column-end: 1;
   }
 }
 

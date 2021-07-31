@@ -21,13 +21,16 @@
 .facts__list {
   @include clear-list;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  column-gap: 39px;
   row-gap: 20px;
+
+  @media (max-width: $desktop-container-width) {
+    column-gap: 34px;
+  }
 
   @media (max-width: $tablet-max-width) {
     justify-content: center;
-    column-gap: 34px;
     row-gap: 43px;
   }
 
